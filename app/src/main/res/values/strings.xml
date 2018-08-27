@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">S-Cloud</string>
+    <string name="action_search">Search</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_exit">Exit</string>
+    <string name="title_stream">Stream</string>
+    <string name="title_genre">Genre</string>
+    <string name="title_library">Library</string>
+    <string name="title_song_name">Song name</string>
+    <string name="example">Example</string>
+    <string name="title_artist_name">Artist</string>
+    <string name="title_like_count">Like</string>
+    <string name="title_time">0.00</string>
+    <string name="example_songname">Song Name</string>
+    <string name="example_artist">Artist</string>
+    <string name="example_like">Like</string>
+    <string name="msg_fetch_failed">Load track failed</string>
+    <string name="all_music"></string>
+    <string name="all_audio">All Audio</string>
+    <string name="country">Country</string>
+    <string name="ambient">Ambient</string>
+    <string name="alternative">Alternative</string>
+    <string name="classic">Classic</string>
+    <string name="message_no_track">No Track Available</string>
+    <string name="title_show_no_track">There\'s no song in your phone!</string>
+    <string name="title_shownotrack">There\'s no song in your phone!</string>
+    <string name="title_showerrornotrack">Cannot load tracks!</string>
+    <string name="title_permission">permission granded</string>
+    <string name="message_finding_tracks">Finding...</string>
+    <string name="message_download_error">Can not download this song!</string>
+    <string name="message_downloading">Downloading</string>
+</resources>

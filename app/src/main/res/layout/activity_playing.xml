@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_playing_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/title_song_name"
+        android:textSize="@dimen/song_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_playing_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:text="@string/title_artist_name"
+        android:textSize="@dimen/artist_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_playing_name" />
+
+    <ImageButton
+        android:id="@+id/button_previous"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginBottom="@dimen/margin"
+        android:background="@drawable/ic_skip_previous_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_playing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_playing_artist"
+        app:layout_constraintVertical_bias="0.787" />
+
+    <ImageButton
+        android:id="@+id/button_play"
+        android:layout_width="@dimen/button_play_size"
+        android:layout_height="@dimen/button_play_size"
+        android:layout_marginBottom="@dimen/margin"
+        android:background="@drawable/ic_play_arrow_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_playing"
+        app:layout_constraintEnd_toStartOf="@+id/button_next"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/button_previous"
+        app:layout_constraintTop_toBottomOf="@+id/text_playing_artist"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageButton
+        android:id="@+id/button_next"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginBottom="@dimen/margin"
+        android:background="@drawable/ic_skip_next_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_playing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_playing_artist"
+        app:layout_constraintVertical_bias="0.787" />
+
+    <TextView
+        android:id="@+id/text_playingtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text_time"
+        android:text="@string/title_time"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_playing"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_durationtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_text_time"
+        android:text="@string/title_time"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_playing"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekbar_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/seekbar_marginbottom"
+        android:layout_marginEnd="@dimen/margin_text_time"
+        android:layout_marginStart="@dimen/margin_text_time"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/playing_height" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/playing_height"
+        android:background="@color/color_blue_grey_600"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline2" />
+
+    <ImageButton
+        android:id="@+id/image_button_NoRepeat"
+        style="@style/image_button"
+        android:layout_marginStart="@dimen/button_playing_margin"
+        android:layout_marginTop="@dimen/button_playing_margin"
+        android:background="@drawable/ic_repeat_orange_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline2" />
+
+    <ImageButton
+        android:id="@+id/image_download"
+        style="@style/image_button"
+        android:layout_marginTop="@dimen/button_playing_margin"
+        android:background="@drawable/ic_shuffle_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/image_button_NoRepeat"
+        app:layout_constraintTop_toTopOf="@id/guideline2" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/image_button"
+        android:layout_marginEnd="@dimen/button_playing_margin"
+        android:layout_marginTop="@dimen/button_playing_margin"
+        android:background="@drawable/download"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline2" />
+</android.support.constraint.ConstraintLayout>
